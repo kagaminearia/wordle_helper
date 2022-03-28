@@ -7,7 +7,7 @@ from copy import deepcopy
 
 def read_img(info, colors, img_name = 'wordle.png'):
 
-    img = cv2.imread('wordle.png')
+    img = cv2.imread(img_name)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img_g = deepcopy(img)
     m, n, _ = img.shape
