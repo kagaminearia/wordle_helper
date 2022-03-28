@@ -7,6 +7,19 @@ from copy import deepcopy
 
 def read_img(info, colors, img_name = 'wordle.png'):
 
+    '''
+    Read an input image, filter the information on the image based on colors.
+
+    :param: info
+    :type: list
+    :param: colors
+    :type: np.ndarray
+    :param: img_name
+    :type: str
+    :rtype: list
+    '''
+    
+    # read the input image, convert the image to RGB type for ease of recognization
     img = cv2.imread(img_name)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img_g = deepcopy(img)
@@ -20,10 +33,16 @@ def read_img(info, colors, img_name = 'wordle.png'):
                 mask[i, j] = 1
                 img_g[i, j] = np.array([[0, 0, 0]])
             else: mask[i, j] = 0
+
+    # plt.imshow(mask)
+    # plt.show()
     
     # process on the mask
     mask = mask.astype('int')
     res = label(mask)
+
+    # plt.imshow(res)
+    # plt.show()
     
     # get the possible regions
     regions = regionprops(res)
@@ -40,22 +59,20 @@ def read_img(info, colors, img_name = 'wordle.png'):
         # read text from image using pytesseract
         configuration = ("-l eng --oem 1 --psm 10")
         temp = pyt.image_to_boxes(curr, config = configuration)
-        # print (temp)
+        print(temp)
         if not temp[0].isalpha(): 
             token += 1
             continue
-        color = img[minr - 10, minc - 10]
 
+        color = img_g[minr - 5, minc - 5]
+        print(color)
         for i in range(len(colors)):
             if np.sum(np.absolute(color - colors[i])) < 10: 
                 info[i].add((temp[0].lower(), pos))
-                # if i == 0: 
-                #     info[i].add(temp[0].lower())
-                # else:
-                #     info[i].add((temp[0].lower(), pos))
+                # break
         
         token += 1
-    
+    print(info)
     return info
 
 
