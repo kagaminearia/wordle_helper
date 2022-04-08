@@ -15,14 +15,13 @@ cd ~/wordle_helper
 git init
 git pull https://github.com/caffreyu/wordle_magic.git
 pip3 install -r requirements.txt
-sudo apt-get install tesseract-ocr tesseract-ocr-eng
 chmod +x wordle_magic.sh
 ```
 
 __Usage__
 
-1. Take a screenshot of the wordle game you are struggling with. Make sure to name your picture as `wordle.png` in the `~/wordle_helper` directory.
-2. Open your terminal and navigate to the `~/wordle_helper` directory. Simply type `./wordle_magic`. The magic will happen in just seconds!
+1. Take a screenshot of the wordle game you are struggling with. Name your picture as `wordle.png` or anything and save it in the `~/wordle_helper` directory.
+2. Open your terminal and navigate to the `~/wordle_helper` directory. Simply type `./wordle_magic` if you named it `wordle.png`, or type `./wordle_magic $NAME_OF_YOUR_IMAGE$` if you named it differently. The magic will happen in just seconds!
 
 
 ### Reference
