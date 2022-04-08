@@ -1,5 +1,5 @@
 # Wordle Magic
-A helper for the game wordle! Just take a screenshot of the game, it will help you figure out possible words in just seconds. 
+A helper for the game [wordle](https://www.nytimes.com/games/wordle/index.html)! Just take a screenshot of the game, it will help you figure out possible words in just seconds. 
 
 # Instructions on Installation and Usage
 
