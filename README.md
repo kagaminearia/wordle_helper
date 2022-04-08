@@ -23,6 +23,14 @@ __Usage__
 1. Take a screenshot of the wordle game you are struggling with. Name your picture as `wordle.png` or anything and save it in the `~/wordle_helper` directory.
 2. Open your terminal and navigate to the `~/wordle_helper` directory. Simply type `./wordle_magic` if you named it `wordle.png`, or type `./wordle_magic $NAME_OF_YOUR_IMAGE$` if you named it differently. The magic will happen in just seconds!
 
+__Explanation__
+
+`characters.pickle`: stores the binary mask of every English character.
+
+`c_store.pickle`: stores a dictionary of English characters mapping to its binary mask.
+
+`img_data`: a directory contains images for training, used by `data_collector.py`.
+
 
 ### Reference
 
