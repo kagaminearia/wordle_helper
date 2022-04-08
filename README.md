@@ -1,5 +1,5 @@
 # Wordle Magic
-A helper for the game [wordle](https://www.nytimes.com/games/wordle/index.html)! Just take a screenshot of the game, it will help you figure out possible words in just seconds. 
+A helper for the game wordle! Just take a screenshot of the game, it will help you figure out possible words in just seconds. 
 
 # Instructions on Installation and Usage
 
@@ -28,4 +28,3 @@ __Usage__
 ### Reference
 
 Dictionary of words: [Google 10000 words no swear](https://github.com/first20hours/google-10000-english/blob/master/google-10000-english-no-swears.txt) and [All English words](https://github.com/dwyl/english-words/blob/master/words.txt).
-
