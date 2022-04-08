@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ${#1} == 0 ]
+if [ -z "$1" ]
 then
     echo "You are getting results for wordle.png"
     python3 main.py
