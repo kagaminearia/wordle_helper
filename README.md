@@ -10,10 +10,9 @@ Create a new directory and push this repo to that directory. Install the require
 **This package is tested on Ubuntu 20.04. It should work on Ubuntu 18.04 as well.**
 
 ```
-mkdir -p ~/wordle_helper
-cd ~/wordle_helper
-git init
-git pull https://github.com/caffreyu/wordle_magic.git
+git clone git@github.com:kagaminearia/wordle_helper.git
+cd wordle_helper
+sudo apt install python3-pip
 pip3 install -r requirements.txt
 chmod +x wordle_magic.sh
 ```
